@@ -73,6 +73,10 @@ ObjectId("61ff5fe83d9a802a987f3ca7")
 - x.toString()
 61ff5fe83d9a802a987f3ca7
 
+# Below picture clear above commands
+![Screenshot (174)](https://user-images.githubusercontent.com/80479635/152673620-2a1b9623-90bf-4892-a62c-a68e717a3c5d.png)
+![Screenshot (175)](https://user-images.githubusercontent.com/80479635/152673636-aa53afb4-45ef-43fa-8153-95444864b32b.png)
+
 # Data types
 
 BSON => Binary JSON
@@ -141,6 +145,9 @@ masai> db.users.find()
   }
 ]
 
+# Below picture for above
+![Screenshot (176)](https://user-images.githubusercontent.com/80479635/152673674-d66c73c1-b152-4ac4-b384-da3cce526f17.png)
+
 # replace one (like put or patch)
 -db.users.replaceOne({ _id: ObjectId("61fc05022892133ef299d89b") },{name: "SatyaBrata",code: "pw1_135",active: true})
 masai> db.users.find()
@@ -171,6 +178,9 @@ masai> db.users.find()
     active: true
   }
 ]
+
+# Below picture for above
+![Screenshot (177)](https://user-images.githubusercontent.com/80479635/152673704-f2b22c9a-36d1-485a-950a-6be258e412e1.png)
 
 # updateMany
 masai> db.users.updateMany({ active: true },{$set: {active: false}})
@@ -208,6 +218,8 @@ masai> db.users.find()
     active: false
   }
 ]
+# Below picture for above
+![Screenshot (178)](https://user-images.githubusercontent.com/80479635/152673719-5ad3bfe5-afdf-4629-89f4-14a5874545b4.png)
 
 # updateMany by $set operator
 masai> db.users.updateMany({ active: false },{$set: {followers: 0}})
@@ -280,6 +292,9 @@ masai> db.users.find()
     followers: 0
   }
 ]
+# Below picture for above
+![Screenshot (179)](https://user-images.githubusercontent.com/80479635/152673748-eb354bfb-4c9a-4913-b164-c8be263a78eb.png)
+![Screenshot (180)](https://user-images.githubusercontent.com/80479635/152673782-5dd339c6-0400-43d7-a621-699846391d82.png)
 
 # updateMany By $inc operator
 masai> db.users.updateMany({ name: "Satya" },{$inc: {followers: 1}})
@@ -321,9 +336,11 @@ masai> db.users.find()
     followers: 0
   }
 ]
+# Below picture for above
+![Screenshot (181)](https://user-images.githubusercontent.com/80479635/152673806-9440ce8f-0fe9-475a-9442-1af8a6c2eda2.png)
+![Screenshot (182)](https://user-images.githubusercontent.com/80479635/152673827-88268b89-1d7c-415d-9c20-c819077b3af3.png)
 
 # delete
-
 -deleteOne
 -deleteMany
 
@@ -376,6 +393,8 @@ masai> db.temp.deleteMany({})
 masai> db.temp.find()
 
 masai>
+# Below picture for above
+![Screenshot (183)](https://user-images.githubusercontent.com/80479635/152673860-70d17358-b189-4680-85cc-4139bff3c9dc.png)
 
 # use of different db
 masai> use temporarydb
@@ -396,6 +415,9 @@ masai    123 kB
 # insertMany in companies(db) like 1000
 
 -db.companies.insertMany([MOCK_DATA.json file data])
+# Below picture for above
+![Screenshot (184)](https://user-images.githubusercontent.com/80479635/152673873-aafe3bbe-6f1f-46cf-ba58-58add721bd95.png)
+![Screenshot (185)](https://user-images.githubusercontent.com/80479635/152673898-a7058b84-e726-43f4-8d7a-74f1908be30f.png)
 
 # Comparison operators
 
@@ -439,6 +461,8 @@ masai    123 kB
 
 -db.companies.find({rating: {$in: [3,4,5]}}).count()
 33
+# Below picture for above
+![Screenshot (186)](https://user-images.githubusercontent.com/80479635/152673922-7d6f4266-91ba-4ae0-94bb-83816750e75c.png)
 
 -db.companies.find({rating: {$nin: [3,4,5]}}).count()
 971
